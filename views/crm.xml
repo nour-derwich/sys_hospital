@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="crm_lead_view_form_inherited" model="ir.ui.view">
+        <field name="name">crm.lead.form.inherited</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='stage_id']" position="attributes">
+                    <attribute name="options">{'no_create': True, 'no_create_edit': True}</attribute>
+                </xpath>
+                <!-- Add a button after the stage field -->
+
+                <!-- Add a notebook  -->
+                <notebook>
+                    <page string="Additional Information">
+
+                        <group>
+
+                        </group>
+                    </page>
+                </notebook>
+
+            </data>
+        </field>
+    </record>
+
+</odoo>
